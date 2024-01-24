@@ -13,3 +13,11 @@ print(double_my_number_with_lambda(5))
 
 #nice right?! defining the function in the good old <def> allows us to see clearly whats happening. Lets keep going
 
+#lambda inside a list?
+power_lambda = lambda x: x*x
+lambda_in_list_1 = [power_lambda(x) for x in range(10)]
+lambda_in_list_2 = [x*x for x in range(10)]
+
+print(lambda_in_list_1)
+print(lambda_in_list_2)
+#lambda inside a tuple?
