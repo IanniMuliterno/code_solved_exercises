@@ -35,5 +35,5 @@ print(shifted_alphabet)
 encoder = dict(zip(alphabet,shifted_alphabet))
 
 #lambda functions for encoding and decoding
-encode = lambda text:  '.join(encoder.get(char,char) for char in text)
+encode = lambda text:  ''.join(encoder.get(char,char) for char in text)
 decode = lambda text: ''.join(shifted_alphabet.get(char,char) for char in text)
