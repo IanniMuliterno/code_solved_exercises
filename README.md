@@ -8,5 +8,10 @@ Always remove the solutions before start the practice, if you just copy/paste or
 
 ### People/Sources who inspired this content
 
-[codebasics](https://www.youtube.com/channel/UCh9nVJoWXmFb7sLApWGcLPQ)
-[leetcode](https://leetcode.com/)
+[codebasics](https://www.youtube.com/channel/UCh9nVJoWXmFb7sLApWGcLPQ) 
+
+A great youtube channel for data professionals, the author also has a teaching plataform
+
+[leetcode](https://leetcode.com/) 
+
+Site for code challenges
