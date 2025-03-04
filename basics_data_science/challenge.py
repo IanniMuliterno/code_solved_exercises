@@ -1,5 +1,5 @@
 ### **Challenge: Optimal Feature Selection for Model Training**
-```
+"""
 #### **Problem Statement**
 You are given a dataset represented as a 2D matrix `X` of size `(n_samples, n_features)` and a target vector `y` of size `(n_samples,)`. Your task is to select the optimal subset of features that maximizes the model's performance while minimizing the number of features used.
 
@@ -21,7 +21,7 @@ To achieve this, you need to implement a function `select_features(X, y, k)` tha
 - A list of indices of the selected features (sorted in descending order of importance).
 ```
 #---
-
+"""
 #### **Example**
 import numpy as np
 
@@ -86,7 +86,7 @@ y = np.array([0, 1, 0])
 k = 2
 print(select_features(X, y, k))  # Output: [2, 1] or [1, 2]
 
-```
+"""
 #### **Hints**
 1. **Mutual Information** measures the dependence between two variables. For discrete data, it can be calculated as:
    \[
@@ -118,4 +118,4 @@ This challenge tests your ability to:
 - Implement a core data science concept (feature selection).
 - Write efficient and scalable code.
 - Handle edge cases and optimize for performance.
-```
+"""
