@@ -17,4 +17,9 @@ length_of_longest_substring_two_distinct(s)
 
 aabbb
 
+Constraints:
+1 <= s.length <= 10^5
+s consists of English letters, digits, symbols, and spaces.
+Approach:
+To solve this problem, you can use the sliding window technique with a hashmap to store the frequency of characters in the current window. Keep track of the length of the longest valid substring as you move the window.
 """
