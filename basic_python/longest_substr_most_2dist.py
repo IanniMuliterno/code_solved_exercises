@@ -42,9 +42,8 @@ def longest_subst(text) -> int:
     
             while j <= (full_len - i):
                 string_piece = text[j:(full_len-(full_len-i)+j)]
-                #print(string_piece)
-                if len(set(string_piece)) <= 2:
-                    print(string_piece)
+                
+                if len(set(string_piece)) <= 2
                     return i
                     
                 else:
