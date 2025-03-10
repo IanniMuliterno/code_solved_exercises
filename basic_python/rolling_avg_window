@@ -1,0 +1,40 @@
+"""
+Problem Statement:
+
+You are given a list of numerical data points, data, and a window size, window_size. Your task is to implement a function, rolling_aggregate, that calculates a rolling aggregate over the data. However, instead of using standard aggregations like mean or sum, you must accept a custom aggregation function, aggregate_func, as an argument.
+
+Specific Requirements:
+
+The rolling_aggregate function should take three arguments: data (a list of numbers), window_size (an integer), and aggregate_func (a function that takes a list of numbers and returns a single number).
+The output should be a list of aggregated values, where each value represents the result of applying aggregate_func to a sliding window of size window_size.
+If the window_size is greater than the length of data, return an empty list.
+If the window_size is less than or equal to 0, return an empty list.
+Handle edge cases where the window extends beyond the beginning or end of the data list by only calculating on valid data points within the window.
+"""
+
+example = [0,1,10,5]
+
+def avg_window(agg_func, number_list, window_size = 3) -> list:
+
+    if window_size == 0 | window_size > len(number_list):
+        return []
+
+    output = []
+    for i in range(len(number_list)-window_size + 1):
+        
+        #avg_value = np.mean(number_list[i:window_size+i])
+        #avg_value = round(avg_value,2)
+        agg_value = agg_func(number_list[i:window_size+i])
+        output.append(agg_value)    
+    
+    return output
+
+#test
+
+def avg_func(input):
+    assert isinstance(input,list)
+    assert all(isinstance(item, (int, float)) for item in input)
+
+    return round(sum(input)/len(input),2)
+
+print(avg_window(avg_func,example,3))
