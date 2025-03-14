@@ -6,7 +6,13 @@
 
 --Return the result table in any order.
 
+with aux_tb as (
 select d.name as Department, 
-e.name as Employee, salary ,dense_rank() over (partition by d.name order by salary desc) as rank_salary
+e.name as Employee, salary as Salary ,dense_rank() over (partition by d.name order by salary desc) as rank_salary
 from department d
 left join employee e on d.id = e.departmentId
+)
+
+select Department, Employee, Salary
+from aux_tb
+where rank_salary < 4
